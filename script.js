@@ -1,12 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-});
-
 const toggleButton = document.getElementById("dark-mode-toggle");
 const icon = document.getElementById("dark-mode-icon");
 const body = document.body;
@@ -28,4 +19,3 @@ toggleButton.addEventListener("click", () => {
     icon.src = "moon.png"; // Dark mode icon
   }
 });
-
