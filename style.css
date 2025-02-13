@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-//boiler code
+/* //boiler code */
 
 * {
   margin: 0;
@@ -19,111 +19,143 @@
 @font-face {
   font-family: Paybread;
   src: url(Paybread.ttf);
+}
 
 body {
   background-color: #f4f4f4;
   color: #333;
 
+
 }
 
 /* Header */
-header {
+nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  padding: 10px;
-  background-color: bisque;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  width: 100%;
+  justify-content: space-between;
+  background-color: #4A2C2A;
+  color: white;
+  padding: 1rem 2rem;
+  align-items: center;
+  height: 65px;
 }
 
-/* Logo */
-.logo img {
-  max-width: 80px;
+.logo img{
+ height: 50px;
+  
+  
 }
-
-/* Navigation */
 .nav {
   display: flex;
+ gap: 15px;
 }
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  width: 60%;
-  background-color: bisque;
-}
-
-.nav-list li {
-  margin-right: 50px;
-}
-
-.nav-list a {
-  text-decoration: none;
-  font-family: "Paybread";
-
-  padding: 15px 50px;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo img {
-  width: 50px;
-}
-
-.nav ul {
-  display: flex;
-  list-style: none;
-}
-
-.nav li {
-  margin-right: 20px;
-}
-
 .nav a {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+  color: #f8f9fa;
   text-decoration: none;
-
-  font-size: 1.2rem;
-  color: #333;
-  transition: color 0.3s ease;
+  padding: 10px;
+  position: relative;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
-
-
-.nav-list a:hover {
-  color: orangered;
+.nav a::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,#FF8C00,#FFD700);
+  transform: scaleX(0);
+  transition:transform 0.3s ease-in-out;
 }
-
-/* Hamburger Menu */
-.hamburger {
+.nav a:hover::after{
+  transform: scaleX(1);
+}
+.nav a:hover {
+ color: #ffeb3b;
+ text-shadow: 0px 0px 5px rgba(255,235,59,0.7);
+}
+.ham{
   display: none;
   flex-direction: column;
+  gap: 5px;
   cursor: pointer;
-  background: none;
-  border: none;
+}
+#menu{
+  display: none;
+}
+.ham span{
+display: block;
+width: 35px;
+height: 4px;
+background-color: white;
+border-radius: 2px;
+transition: 0.3s;
+left: 90px;
+
 }
 
-.hamburger span {
-  width: 30px;
-  height: 3px;
-  background: black;
-  margin: 3px;
+@media screen and (max-width:851px){
+  .nav{
+       display: none;
+       flex-direction: column;
+       position: absolute;
+       z-index: 100;
+       right: 0;
+       top: 63px;
+       left: 0;
+       width: 100%;
+       background: linear-gradient(to bottom,#be5345,#c95353);
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       border-radius: 5px;
+       text-align: center;
+  }
+  .nav a{
+      display: block;
+      padding: 15px;
+      position: relative;
+     text-decoration: none;
+     color: white;
+     position: relative;
+    
+  }
+  .nav a:hover{
+      color: white;
+      transform: scale(1.05);
+      text-decoration: none;
+  
+  }
+  .nav a::after{
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg,#ffdd57,#ff6699);
+      transform: scaleX(0);
+      transition:transform 0.3s ease-in-out;
+  }
+  .nav a:hover::after{
+      transform: scaleX(1);
+  }
+  .ham{
+      display: flex;
+  }
+
+  #menu:checked~ .nav{
+         display: flex;
+  }
+ 
+}
+@media (max-width:675px){
+  .nav{
+      max-width: 100%;
+  }
 }
 
-/* Hero Section */
-.hero {
-  height: 600px;
-  overflow: hidden;
-
-.nav a:hover {
-  color: #ff5733;
-}
 
 /* Hero Section */
 .hero {
@@ -153,6 +185,7 @@ header {
   position: absolute;
   height: 100%;
   top: 0;
+}
 
 .hero-image img {
   position: absolute;
@@ -185,6 +218,7 @@ header {
   font-size: 1.8rem;
   margin-top: -10px;
   margin-bottom: 19px;
+}
 
 .hero-button {
   display: inline-block;
@@ -214,8 +248,6 @@ header {
   margin: 15px;
   background-color: blueviolet;
   border-radius: 20px;
-
-.destination h2{
  
   font-size: 2rem;
   font-weight: bold;
@@ -290,8 +322,6 @@ header {
   grid-gap: 40px;
   color: orange;
 }
-
-.hotel-item img {
 
 .destination h2:hover{
   background-color: #ff5733;
@@ -420,6 +450,7 @@ header {
 .contact-info p {
   font-family: "Paybread";
   font-size: 1.4rem;
+}
 
 .team-memberss h4 {
   font-size: 1.5rem;
@@ -502,7 +533,6 @@ textarea {
   height: 170px;
 }
 
-::placeholder {
 
 .form button:hover {
   background: #ff8c42;
@@ -589,43 +619,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  header {
-    padding: 10px;
-  }
-  .logo img {
-    max-width: 50px;
-  }
-  .nav {
-    display: none;
-    flex-direction: column;
-    width: 60%;
-    background: bisque;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    text-align: center;
-    position: absolute;
-    display: none;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    position: absolute;
-    right: -65%;
-    background-color: bisque;
-  }
-
-  .nav-list li {
-    margin: 10px 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav.active {
-    display: flex;
-  }
 
   .destination-grid,
   .hotels-grid {
@@ -669,7 +662,7 @@ footer {
   color: #ff5733;
 }
 
-//dark mode
+/* dark mode */
 
 
 .dark-mode {
@@ -677,7 +670,7 @@ footer {
   color: #fff;
 }
 
-.dark-mode header {
+.dark-mode nav {
   background-color: #333;
 }
 
@@ -712,8 +705,8 @@ footer {
   color: #fff !important;  
 }
 
-.dark-mode .nav a:hover {
-  color: #ff8c42;  
+.dark-mode nav {
+  color: #4d4541;  
 }
 
 .dark-mode .about {
@@ -744,4 +737,10 @@ footer {
 #dark-mode-toggle img:hover {
   transform: scale(1.1);
 }
+@media(max-width:851px){
+  .dark-mode .nav{
+    background: linear-gradient(to bottom,#312c2c,#615d5d);
+    border-top: 2px solid gray ;
+  }
 
+}
