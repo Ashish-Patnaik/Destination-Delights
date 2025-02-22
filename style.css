@@ -202,10 +202,10 @@ left: 90px;
 
 .hero-content {
   position: absolute;
-  top: 40%;
-  left: 20%;
   text-align: center;
   color: #fff;
+  justify-content: center;
+  top:40%
 }
 
 .hero-content h1 {
