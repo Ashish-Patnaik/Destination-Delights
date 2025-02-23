@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn">⬆</button>
   <header>
     <nav>
     <div class="logo">
@@ -198,6 +200,22 @@
       </div>
     </div>
   </footer>
+  <script>
+    // Scroll to Top button functionality
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
   <script src="script.js"></script>
 
 </body>
