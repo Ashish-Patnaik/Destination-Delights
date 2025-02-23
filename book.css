@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    background-image: url("https://cdn.pixabay.com/photo/2022/01/11/23/46/sea-6931674_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: brightness(60%);
+}
+
+/* Header */
+header {
+    /* background: rgba(0, 0, 0, 0.6); */
+    /* background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg"); */
+    padding: 30px 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.filters input, .filters select, .filters button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.filters button {
+    background: #ff5a5f;
+    color: white;
+    cursor: pointer;
+}
+
+/* Accommodation Section */
+.accommodation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff5a5f;
+    font-size: 18px;
+}
+
+.book-btn {
+    background: #ff5a5f;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.book-btn {
+    background: linear-gradient(135deg, #ff5a5f, #ff787d);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.book-btn:hover {
+    background: linear-gradient(135deg, #e04a4e, #ff5a5f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Click Effect */
+.book-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
