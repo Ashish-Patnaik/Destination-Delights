@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-Screen Centering */
+body {
+    background: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    backdrop-filter: blur(8px);
+}
+
+/* Back Button */
+.back-button {
+    height: 40px;
+    width: 80px;
+    background: #2867f0;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #0190f6;
+    transform: scale(1.1);
+}
+
+/* Feedback Wrapper */
+.feedback-wraper {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.feedback-wraper:hover {
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+/* Input Styles */
+.feedback-wraper input,
+.feedback-wraper textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease;
+    resize: none;
+}
+
+.feedback-wraper input:focus,
+.feedback-wraper textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px #2867f0;
+}
+
+/* Submit Button */
+.feedback-wraper button[type='submit'] {
+    background: #2867f0;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-wraper button[type='submit']:hover {
+    background: #0190f6;
+    transform: scale(1.08);
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #2867f0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.popup button:hover {
+    background: #0190f6;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

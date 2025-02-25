@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Delights | Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./feedback.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <button class="back-button" onclick="window.location.href = './index.html'">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button>
+    </nav>
+
+    <!-- Feedback form -->
+    <section class="feedback-wraper">
+        <form action="./userFeedback.php" method="get">
+            <!-- Name -->
+            <label for="name">
+                <input type="text" id="name" placeholder="Enter your name :" required>
+            </label>
+
+            <!-- Email -->
+            <label for="email">
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </label>
+
+            <!-- Phone Number -->
+            <label for="mobile">
+                <input type="number" id="mobile" placeholder="Enter your mobile number :">
+            </label>
+
+            <!-- Feedback message -->
+            <label for="feedbackMessage">
+                <textarea id="feedbackMessage" rows="5" placeholder="Enter your feedback message here"
+                    required></textarea>
+            </label>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('.feedback-wraper form');
+        const popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.innerHTML = '<p>Thank you for your valuable feedback!</p><button onclick="closePopup()">Close</button>';
+        document.body.appendChild(popup);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            popup.classList.add('active');
+        });
+
+        window.closePopup = () => {
+            popup.classList.remove('active');
+        };
+    });
+</script>
+
+</html>
