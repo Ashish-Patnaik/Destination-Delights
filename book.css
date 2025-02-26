@@ -31,9 +31,11 @@ p {
 /* Filters */
 .filters {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    max-width: 70%;
     gap: 15px;
     padding: 20px;
+    margin: 0 auto; 
     background: rgba(255, 255, 255, 0.2);
 }
 
