@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .dark-mode .blog-container{
+          /* background-color: #121212; */
+  color: #fff;
+  background: #333;
+  /* color: white; */
+  border: 1px solid #444;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+        }
+       
+
+
+.dark-mode h1,.dark-mode h2,.dark-mode h3{
+  color: #ffcc00 !important;
+}
+
+
+.container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .blog-section {
+            padding: 50px 0;
+        }
+
+        .blog-title {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            display: block;
+        }
+
+        .blog-card {
+            display: flex;
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.02);
+        }
+
+        .blog-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blog-content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .blog-content h2 {
+            margin: 0;
+            color: #007bff;
+            font-size: 1.8rem;
+        }
+
+        .blog-content p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            background: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .read-more:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .blog-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-card img {
+                width: 30%;
+                height: auto;
+                
+            }
+        }
+
+  </style>
+</head>
+  <body class="blog-body">
+   
+    <header>
+      <nav>
+      <div class="logo">
+        <img src="business-trip.png" alt="">
+      </div>
+      <input type="checkbox" id="menu">
+      <label for="menu" class="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+        <div class="nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#destination">Destination</a>
+          <a href="index.html#hotels">Hotels</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="review.html">Testimonial</a>
+          <a href="login.html">Login</a>
+          <button id="dark-mode-toggle"><img id="dark-mode-icon" src="moon.png" width="24"></button>
+          </div>
+          
+        </nav>
+      
+  
+  
+  </header> 
+  
+
+        <!-- Blog Section -->
+        <section class="blog-section">
+          <div class="container">
+              <h1 class="blog-title">Travel Blogs & Guides</h1>
+              <p id="noResults" style="display: none; text-align: center; font-size: 18px; color: red;">No results found</p>
+              
+              <!-- Search Bar -->
+              <input type="text" id="searchInput" class="search-bar" placeholder="Search travel blogs..." onkeyup="searchBlogs()">
+      
+              <!-- Blog Posts -->
+              <div class="blog-card" data-title="Top 10 Must-Visit Destinations in 2024">
+                  <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821_640.jpg" alt="travel destinations">
+                  <div class="blog-content">
+                      <h2>Top 10 Must-Visit Destinations in 2024</h2>
+                      <p>Discover the most breathtaking travel spots for 2024, from serene beaches to vibrant cities. Find out where to go next!</p>
+                      <a href="https://www.travelandleisure.com/worlds-best" class="read-more">Read More</a>
+                  </div>
+              </div>
+      
+              <div class="blog-card" data-title="Best Budget Hotels for Travelers">
+                  <img src="https://tse2.mm.bing.net/th?id=OIP.6YP62dPiSuICCByc8vseSAHaE6&pid=Api&P=0&h=180" alt="budget hotels">
+                  <div class="blog-content">
+                      <h2>Best Budget Hotels for Travelers</h2>
+                      <p>Looking for affordable stays? Here’s a list of the best budget-friendly hotels that offer great comfort at a low cost.</p>
+                      <a href="https://www.booking.com/budget.html" class="read-more">Read More</a>
+                  </div>
+              </div>
+      
+              <div class="blog-card" data-title="Top 5 Hidden Gems to Visit">
+                  <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849824_640.jpg" alt="hidden gems">
+                  <div class="blog-content">
+                      <h2>Top 5 Hidden Gems to Visit</h2>
+                      <p>Escape the crowds and explore lesser-known but stunning travel destinations that you won’t regret visiting.</p>
+                      <a href="https://www.nationalgeographic.com/travel/" class="read-more">Read More</a>
+                  </div>
+              </div>
+      
+              <div class="blog-card" data-title="Essential Travel Tips for First-Time Travelers">
+                  <img src="https://tse4.mm.bing.net/th?id=OIP.kexAaMTnMaNi8DDHcx6yhgHaE8&pid=Api&P=0&h=180" alt="travel tips">
+                  <div class="blog-content">
+                      <h2>Essential Travel Tips for First-Time Travelers</h2>
+                      <p>Planning your first trip? Here are expert tips to make your travel smooth, enjoyable, and hassle-free.</p>
+                      <a href="https://www.lonelyplanet.com/articles/first-time-travel-tips" class="read-more">Read More</a>
+                  </div>
+              </div>
+      
+              <div class="blog-card" data-title="How to Find the Best Local Food on Your Travels">
+                  <img src="https://tse4.mm.bing.net/th?id=OIP.C6Ml-UCzm-Io4CubOKu8jgHaE8&pid=Api&P=0&h=180" alt="local food">
+                  <div class="blog-content">
+                      <h2>How to Find the Best Local Food on Your Travels</h2>
+                      <p>Enjoy authentic flavors while traveling! Here’s how to discover the best local cuisine in any destination.</p>
+                      <a href="https://www.eater.com/maps/best-food-cities" class="read-more">Read More</a>
+                  </div>
+              </div>
+      
+          </div>
+      </section>
+      
+  
+      <script>
+        function searchBlogs() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let blogCards = document.querySelectorAll('.blog-card');
+            let noResults = document.getElementById('noResults');
+            let found = false;
+    
+            blogCards.forEach(card => {
+                let title = card.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = "flex";
+                    found = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+    
+            // Show 'No results found' if no blogs match
+            if (found) {
+                noResults.style.display = "none";
+            } else {
+                noResults.style.display = "block";
+            }
+        }
+    </script>
+    
+    <footer>
+
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="business-trip.png" alt="">
+        </div>
+  
+        <div class="footer-content">
+          <!-- <div class="footer-detail">
+            <div class="location">
+              <img src="images/icon-location.svg" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua</p>
+            </div>
+            <div class="phone">
+              <img src="images/icon-phone.svg" alt="">
+              <p>+1-543-123-4567</p>
+            </div>
+            <div class="email">
+              <img src="images/icon-email.svg" alt="">
+              <p>example@huddle.com</p>
+            </div>
+  
+          </div> -->
+          <div class="footer-content-links">
+            <a href="index.html#about">About Us</a>
+            <a href="#">What We Do</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div class="footer-content-links">
+            <a href="index.html#destination">Destination</a>
+            <a href="blog.html">Blog</a>
+            <a href="index.html#contact">Contact Us</a>
+          </div>
+  
+  
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2024 Destination Delights. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    
+  </body>
+</html>
