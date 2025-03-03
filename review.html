@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Destination-Delights</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        .testimonial-section {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: #5738235b;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .testimonials {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .testimonial {
+            min-width: 100%;
+            padding: 20px;
+            text-align: center;
+            animation: slide 15s infinite;
+        }
+        @keyframes slide {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;  
+            border: 3px solid #2c3e50;
+        }
+        .testimonial p {
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .testimonial h4 {
+            color: #1f618d;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .stars {
+            color: #f4c542;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+    <div class="logo">
+      <img src="business-trip.png" alt="">
+    </div>
+    <input type="checkbox" id="menu">
+    <label for="menu" class="ham">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#destination">Destination</a>
+        <a href="index.html#hotels">Hotels</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="review.html">Testimonial</a>
+        <a href="login.html">Login</a>
+        <button id="dark-mode-toggle"><img id="dark-mode-icon" src="moon.png" width="24"></button>
+        </div>
+        
+      </nav>
+    
+
+
+</header> 
+<div class="testimonial-section">
+  <h2>What Our Happy Travelers Say</h2>
+  <div class="testimonials">
+      
+      <div class="testimonial">
+          <img src="https://i.pravatar.cc/80?img=5" alt="Emily R." class="profile-img">
+          <p>"An unforgettable experience! Found the best travel packages and breathtaking places."</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <h4>- Emily R.</h4>
+      </div>
+
+      <div class="testimonial">
+          <img src="https://i.pravatar.cc/80?img=12" alt="Michael B." class="profile-img">
+          <p>"This site made my dream vacation a reality! The hotel options were fantastic."</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <h4>- Michael B.</h4>
+      </div>
+
+      <div class="testimonial">
+          <img src="https://i.pravatar.cc/80?img=19" alt="Sophia L." class="profile-img">
+          <p>"Super easy to find amazing places to visit. The recommendations were spot on!"</p>
+          <div class="stars">⭐⭐⭐⭐</div>
+          <h4>- Sophia L.</h4>
+      </div>
+
+      <div class="testimonial">
+          <img src="https://i.pravatar.cc/80?img=25" alt="Daniel W." class="profile-img">
+          <p>"I booked my entire trip through this site. The best travel experience ever!"</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <h4>- Daniel W.</h4>
+      </div>
+
+  </div>
+</div>
+
+
+
+  <footer>
+
+    <div class="footer">
+      <div class="footer-logo">
+        <img src="business-trip.png" alt="">
+      </div>
+
+      <div class="footer-content">
+        <!-- <div class="footer-detail">
+          <div class="location">
+            <img src="images/icon-location.svg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua</p>
+          </div>
+          <div class="phone">
+            <img src="images/icon-phone.svg" alt="">
+            <p>+1-543-123-4567</p>
+          </div>
+          <div class="email">
+            <img src="images/icon-email.svg" alt="">
+            <p>example@huddle.com</p>
+          </div>
+
+        </div> -->
+        <div class="footer-content-links">
+          <a href="#about">About Us</a>
+          <a href="#">What We Do</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-content-links">
+          <a href="#destination">Destination</a>
+          <a href="blog.html">Blog</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+
+
+        <div class="icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 Destination Delights. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+    <script src="script.js"></script>
+   
+</body>
+</html>
