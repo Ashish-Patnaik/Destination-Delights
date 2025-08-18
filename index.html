@@ -233,6 +233,16 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 </script>
+  <script>
+        // TODO: Move this to a secure backend server later
+        const mailerApiKey = "sk-live-aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890";
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Form submitted! Using key: ' + mailerApiKey);
+            alert('Thank you for contacting us!');
+        });
+    </script>
   <script src="script.js"></script>
 
 </body>
